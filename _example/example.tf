@@ -9,7 +9,7 @@ locals {
 }
 
 module "vpc" {
-  source      = "git::https://github.com/shanav-tech/terraform-aws-vpc.git?ref=v1.0.0"
+  source      = "git::https://github.com/Shanav-Technologies/terraform-aws-vpc.git?ref=v1.0.0"
   name        = "vpc"
   environment = local.environment
   label_order = local.label_order
@@ -19,7 +19,7 @@ module "vpc" {
 #tfsec:ignore:aws-ec2-no-excessive-port-access # Ingnored because these are basic examples, it can be changed via varibales as per requirement.
 #tfsec:ignore:aws-ec2-no-public-ingress-acl # Ingnored because these are basic examples, it can be changed via varibales as per requirement.
 module "subnets" {
-  source             = "git::https://github.com/shanav-tech/terraform-aws-subnet.git?ref=v1.0.0"
+  source             = "git::https://github.com/Shanav-Technologies/terraform-aws-subnet.git?ref=v1.0.0"
   name               = "subnet"
   environment        = local.environment
   label_order        = local.label_order
